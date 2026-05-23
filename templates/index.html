@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI News Classifier</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #0f172a, #1e293b, #337fa2, #21a752);
+    background-size: 400% 400%;
+    animation: bg 10s ease infinite;
+}
+
+@keyframes bg {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.card {
+    width: 520px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(0,0,0,0.4);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-10px);}
+    100% {transform: translateY(0);}
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    margin-top: 15px;
+    border-radius: 12px;
+    border: none;
+    padding: 15px;
+    outline: none;
+    resize: none;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(90deg, #22c55e, #0ea5e9);
+    color: white;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* loading animation */
+.loader {
+    display: none;
+    margin-top: 15px;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    margin: 0 3px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    animation: bounce 1s infinite alternate;
+}
+
+.dot:nth-child(2) { animation-delay: 0.2s; }
+.dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+    to { transform: translateY(-8px); opacity: 0.5; }
+}
+
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.1);
+    animation: fade 0.5s ease;
+}
+
+@keyframes fade {
+    from {opacity: 0; transform: scale(0.9);}
+    to {opacity: 1; transform: scale(1);}
+}
+
+.tag {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    background: #22c55e;
+    font-weight: bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <h1>🧠 AI News Classifier</h1>
+    <p>Paste news text and get instant prediction</p>
+
+    <textarea id="text" placeholder="Enter news here..."></textarea>
+
+    <button onclick="predict()">Predict</button>
+
+    <!-- loader -->
+    <div class="loader" id="loader">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <p>AI analyzing...</p>
+    </div>
+
+    <div class="result" id="result"></div>
+
+</div>
+
+<script>
+
+async function predict() {
+
+    const text = document.getElementById("text").value;
+
+    if (!text) return;
+
+    document.getElementById("result").innerHTML = "";
+    document.getElementById("loader").style.display = "block";
+
+    const res = await fetch("/predict", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ text })
+    });
+
+    const data = await res.json();
+
+    document.getElementById("loader").style.display = "none";
+
+   document.getElementById("result").innerHTML = `
+    <div class="tag">📌 ${data.label}</div>
+    <p>${data.message}</p>
+    <p>Confidence: ${(data.confidence * 100).toFixed(2)}%</p>
+`;
+}
+
+</script>
+
+</body>
+</html>
