@@ -24,16 +24,15 @@ It classifies news articles into multiple categories with confidence scoring and
 
 ## 📂 Project Structure
 
+```text
 news-classifier/
-│── app.py
-│── requirements.txt
-│── Procfile
-│── .gitignore
-│── templates/
-│    └── index.html
-│── best_distilbert_news_model/ (not included in GitHub)
-
-
+├── app.py
+├── requirements.txt
+├── Procfile
+├── .gitignore
+└── templates/
+    └── index.html
+```
 ## ⚙️ Installation & Setup
 
 ### 1. Clone Repository
