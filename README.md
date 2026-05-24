@@ -32,6 +32,8 @@ news-classifier/
 ├── .gitignore
 └── templates/
     └── index.html
+│── best_distilbert_news_model/ (not included in GitHub)
+
 ```
 ## ⚙️ Installation & Setup
 
