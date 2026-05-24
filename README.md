@@ -43,7 +43,7 @@ news-classifier/
 
 ### 1. Clone Repository
 ```bash
-git clone [https://github.com/LakshKumar12345/news-classifierr.git](https://github.com/LakshKumar12345/news-classifierr.git)
+git clone [https://github.com/LakshKumar12345/news-classifierr.git](https://github.com/LakshKumar12345/Task1_News_Topic_Classifier_Using_BERT.git)
 cd news-classifierr
 ```
 
