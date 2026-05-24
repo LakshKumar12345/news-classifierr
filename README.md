@@ -76,31 +76,18 @@ http://127.0.0.1:5000
 
 ## 📸 Screenshots
 
-👉 Add your screenshots in the `screenshots/` folder and rename them like below:
 
-- Home Page → `home.png`
-- Prediction Page → `predict.png`
-- World News → `world.png`
-- Sports News → `sports.png`
-- Business News → `business.png`
-- Sci/Tech News → `science.png`
-- Unclear Input → `unclear.png`
+![Home Page](screenshots/home.PNG)
 
-### 🖼️ Then use below format in README:
+![World News Result](screenshots/business.PNG)
 
-![Home Page](screenshots/home.png)
+![Sports News Result](screenshots/sports.PNG)
 
-![Prediction Page](screenshots/predict.png)
+![Business News Result](screenshots/world.PNG)
 
-![World News Result](screenshots/world.png)
+![Sci/Tech News Result](screenshots/science.PNG)
 
-![Sports News Result](screenshots/sports.png)
-
-![Business News Result](screenshots/business.png)
-
-![Sci/Tech News Result](screenshots/science.png)
-
-![Unclear Input Result](screenshots/unclear.png)
+![Unclear Input Result](screenshots/unclear.PNG)
 
 ---
 
