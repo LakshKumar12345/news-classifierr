@@ -24,7 +24,6 @@ It classifies news articles into multiple categories with confidence scoring and
 
 ## 📂 Project Structure
 
-```
 news-classifier/
 │── app.py
 │── requirements.txt
@@ -33,7 +32,7 @@ news-classifier/
 │── templates/
 │    └── index.html
 │── best_distilbert_news_model/ (not included in GitHub)
-```
+
 
 ## ⚙️ Installation & Setup
 
