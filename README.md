@@ -39,18 +39,26 @@ news-classifier/
 
 ## 1. Clone Repository
 
+## ⚙️ Installation & Setup
+
+### 1. Clone Repository
 ```bash
-git clone <your-repository-url>
-cd news-classifier
+git clone [https://github.com/LakshKumar12345/news-classifierr.git](https://github.com/LakshKumar12345/news-classifierr.git)
+cd news-classifierr
 ```
 
 
 ### 2. Create Virtual Environment (optional)
+```
 python -m venv venv
-venv\Scripts\activate   (Windows)
 
+# Windows:
+venv\Scripts\activate
+
+# Mac/Linux:
+source venv/bin/activate
 ---
-
+```
 ### 3. Install Dependencies
 pip install -r requirements.txt
 
@@ -60,7 +68,7 @@ pip install -r requirements.txt
 python app.py
 
 ---
-
+> ℹ️ **Note:** When you run `app.py` for the first time, the application will automatically download the fine-tuned DistilBERT model (`best_distilbert_news_model`) from Google Drive. This process may take a few minutes depending on your internet connection, so please be patient! ☕
 ### 5. Open in Browser
 http://127.0.0.1:5000
 
@@ -111,5 +119,8 @@ http://127.0.0.1:5000
 ---
 
 ## 👨‍💻 Author
-
+```
 Laksh Kumar
+Machine learning Intern
+Developers Hub Cooperation
+```
