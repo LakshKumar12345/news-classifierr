@@ -77,17 +77,17 @@ http://127.0.0.1:5000
 ## 📸 Screenshots
 
 
-![Home Page](screenshots/home.PNG)
+![Home Page](screenshot/main.PNG)
 
-![World News Result](screenshots/business.PNG)
+![World News Result](screenshot/business.PNG)
 
-![Sports News Result](screenshots/sports.PNG)
+![Sports News Result](screenshot/sports.PNG)
 
-![Business News Result](screenshots/world.PNG)
+![Business News Result](screenshot/world.PNG)
 
-![Sci/Tech News Result](screenshots/science.PNG)
+![Sci/Tech News Result](screenshot/science.PNG)
 
-![Unclear Input Result](screenshots/unclear.PNG)
+![Unclear Input Result](screenshot/unclear.PNG)
 
 ---
 
