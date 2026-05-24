@@ -35,11 +35,13 @@ news-classifier/
 ```
 ## ⚙️ Installation & Setup
 
-### 1. Clone Repository
-git clone <repo-url>
-cd news-classifier
+## 1. Clone Repository
 
----
+```bash
+git clone <your-repository-url>
+cd news-classifier
+```
+
 
 ### 2. Create Virtual Environment (optional)
 python -m venv venv
