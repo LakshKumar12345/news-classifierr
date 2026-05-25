@@ -122,5 +122,5 @@ http://127.0.0.1:5000
 ```
 Laksh Kumar
 Machine learning Intern
-Developers Hub Cooperation
+Developers Hub Corporation
 ```
